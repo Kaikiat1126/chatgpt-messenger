@@ -8,7 +8,8 @@ const firebaseConfig = {
   projectId: "chatgpt-messenger-908f1",
   storageBucket: "chatgpt-messenger-908f1.appspot.com",
   messagingSenderId: "1057628587686",
-  appId: "1:1057628587686:web:c1349e38b0fa7f4b30d667",
+  appId: "1:1057628587686:web:e1f2b3ea4899577230d667",
+  measurementId: "G-4KSS33F8KK"
 };
 
 // Initialize Firebase
