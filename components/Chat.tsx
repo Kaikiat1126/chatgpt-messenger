@@ -5,7 +5,7 @@ type Props = {
 
 function Chat({ chatID }: Props) {
   return (
-    <div>
+    <div className="flex-1">
       Chat
     </div>
   )
