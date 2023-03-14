@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { useCollection } from "react-firebase-hooks/firestore"
-import { db } from "../Tools/firebase"
+import { db } from "../lib/firebase"
 
 type Props = {
   id: string

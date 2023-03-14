@@ -4,7 +4,7 @@ import { PlusIcon } from '@heroicons/react/24/solid'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { db } from '../Tools/firebase'
+import { db } from '../lib/firebase'
 
 function NewChat() {
 

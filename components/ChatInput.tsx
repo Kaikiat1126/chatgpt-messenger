@@ -5,7 +5,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
 import { toast } from "react-hot-toast";
-import { db } from "../Tools/firebase";
+import { db } from "../lib/firebase";
 
 type Props = {
     chatID: string
