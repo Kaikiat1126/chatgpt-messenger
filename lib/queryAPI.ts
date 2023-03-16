@@ -1,6 +1,7 @@
 import openai from "./chatGPT";
 
 const query = async (prompt: string, chatID: string, model: string) => {
+    console.log("Querying ChatGPT");
     const res = await openai.createCompletion({
         model,
         prompt,
@@ -13,7 +14,14 @@ const query = async (prompt: string, chatID: string, model: string) => {
     .then(res => res.data.choices[0].text)
     .catch(err => `ChatGPT Error: ${err.message}`);
 
+    console.log("ChatGPT Response: ", res);
+    
     return res;
 }
+
+// const query = async (prompt: string, chatID: string, model: string) => {
+//     console.log("Querying ChatGPT");
+//     return "Hello World";
+// }
 
 export default query;

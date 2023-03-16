@@ -16,6 +16,7 @@ function ChatInput({ chatID }: Props) {
   const {data: session} = useSession();
 
   // TODO: useSWR to get the model
+//   const model = 'gpt-3.5-turbo'
   const model = "text-davinci-003"
 
   const sendMessage =async (e: FormEvent<HTMLFormElement>) => {
@@ -41,7 +42,6 @@ function ChatInput({ chatID }: Props) {
         ), message
     );
 
-    //Toast notification to say Loading
     const notification = toast.loading('ChatGPT is thinking...');
 
     await fetch('/api/askQuestion', {
@@ -56,8 +56,11 @@ function ChatInput({ chatID }: Props) {
             session
         })
     }).then(() => {
-        //Toast notification to say success
         toast.success('ChatGPT has responded!', {
+            id: notification,
+        });
+    }).catch(() => {
+        toast.error('ChatGPT failed to respond :(', {
             id: notification,
         });
     })
