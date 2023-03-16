@@ -16,8 +16,8 @@ function ChatInput({ chatID }: Props) {
   const {data: session} = useSession();
 
   // TODO: useSWR to get the model
-//   const model = 'gpt-3.5-turbo'
-  const model = "text-davinci-003"
+  const model = 'gpt-3.5-turbo'
+//   const model = "text-davinci-003"
 
   const sendMessage =async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -70,7 +70,7 @@ function ChatInput({ chatID }: Props) {
     <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm">
       <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
         <input 
-            className="bg-transparent focus:outline-none flex-1 
+            className="bg-transparent focus:outline-none flex-1 select-none 
                 disabled:cursor-not-allowed disabled:text-gray-300"
             disabled={!session}
             value={prompt} 
